@@ -3,7 +3,7 @@ module.exports = function(){
     watch: {
       coffee: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.{coffee,litcoffee,coffee.md}'],
-        tasks: ['newer:coffeelint:app', 'newer:coffee:dist', 'copy:jsMap', 'copy:coffee', 'newer:concat:js']
+        tasks: ['newer:coffeelint:app', 'newer:coffee:dist', 'copy:coffee', 'newer:concat:js']
       },
       coffeeTest: {
         files: ['test/karma/**/*.{coffee,litcoffee,coffee.md}'],
