@@ -7,11 +7,11 @@ module.exports = function(){
       },
       coffee: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.{coffee,litcoffee,coffee.md}'],
-        tasks: ['newer:coffeelint:app', 'newer:coffee:dist', 'copy:coffee', 'newer:concat:js']
+        tasks: ['compile-coffee']
       },
       coffeeTest: {
         files: ['test/karma/**/*.{coffee,litcoffee,coffee.md}'],
-        tasks: ['newer:coffeelint:test', 'karma:unit']
+        tasks: ['compile-tests']
       },
       js: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.{js,json}'],
@@ -23,7 +23,7 @@ module.exports = function(){
       },
       compass: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['compass:server', 'concat:css', 'copy:sprites']
+        tasks: ['compile-sass']
       },
       "static": {
         files: [

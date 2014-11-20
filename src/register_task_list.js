@@ -71,4 +71,29 @@ module.exports = function(grunt){
   grunt.registerTask('poedit-basepath', [
     'replace:poeditbasepath'
   ]);
+
+  // Lint and compile coffee
+  grunt.registerTask('compile-coffee', [
+    'newer:coffeelint:app',
+    'newer:coffee:dist',
+    'newer:concat:js'
+  ]);
+
+  // Lint and compile coffee tests
+  grunt.registerTask('compile-tests', [
+    'newer:coffeelint:test',
+    'karma:unit'
+  ]);
+
+  // Compile sass
+  grunt.registerTask('compile-sass', [
+    'compass:server',
+    'concat:css',
+    'copy:sprites'
+  ]);
+
+  // Copy Assets
+  grunt.registerTask('copy-assets', [
+    'copy:dist'
+  ]);
 };
