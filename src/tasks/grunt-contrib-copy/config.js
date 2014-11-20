@@ -20,14 +20,6 @@ module.exports = function(){
           src: ['generated/*']
         }]
       },
-      jsMap: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/scripts',
-          dest: '<%= yeoman.dist %>/scripts',
-          src: ['**/*.js.map']
-        }]
-      },
       coffee: {
         files: [{
           expand: true,
