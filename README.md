@@ -100,6 +100,10 @@ The following tasks are set up by cornerstone-grunt
 - `grunt custom-karma` runs karma without any overrides
 - `grunt docs` generates test plan documentation from automated tests
 - `grunt poedit-basepath` updates the base path for POEdit files to your local path
+- `grunt compile-coffee` coffeelint, compile, concat js
+- `grunt compile-test` coffeelint, karma:unit
+- `grunt compile-sass` compass, concat css, copy sprites
+- `grunt copy-assets` alias for copy:dist, moves assets not imagemin-ed
 
 ###Subtasks
 
@@ -113,7 +117,6 @@ The following tasks are set up by cornerstone-grunt
 - `compass`  Compile Sass to CSS using Compass
 - `coffee`  Compile CoffeeScript files into JavaScript
 - `connect`  Start a connect web server
-- `concurrent`  Run grunt tasks concurrently
 - `newer`  Run a task with only those source files that have been modified
 - `newer-clean`  Remove cached timestamps
 - `ngAnnotate`  Annotate AngularJS scripts for minification
@@ -146,6 +149,11 @@ To override the default configuration, you would need to add something similar t
   }
 }
 ```
+
+## Release History
+
+ * 2014-11-20    1.1.0    Prune unused tasks, speed up watch on vagrant
+ * 2014-09-11    1.0.0    First Release
 
 License
 ------------------
