@@ -21,7 +21,6 @@ module.exports = function(grunt){
     './tasks/grunt-concurrent/config.js',
     './tasks/grunt-contrib-watch/config.js',
     './tasks/grunt-shell/config.js',
-    './tasks/grunt-contrib-connect/config.js',
     './tasks/grunt-i18next-conv/config.js',
     './tasks/karma/config.js',
     './tasks/cornerstone-test/config.js',
