@@ -1,13 +1,17 @@
 module.exports = function(){
+
   return {
     watch: {
+      options: {
+        spawn: false
+      },
       coffee: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.{coffee,litcoffee,coffee.md}'],
-        tasks: ['newer:coffeelint:app', 'newer:coffee:dist', 'copy:jsMap', 'copy:coffee', 'newer:concat:js']
+        tasks: ['compile-coffee']
       },
       coffeeTest: {
         files: ['test/karma/**/*.{coffee,litcoffee,coffee.md}'],
-        tasks: ['newer:coffeelint:test', 'karma:unit']
+        tasks: ['compile-tests']
       },
       js: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.{js,json}'],
@@ -19,7 +23,7 @@ module.exports = function(){
       },
       compass: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['compass:server', 'concat:css', 'copy:sprites']
+        tasks: ['compile-sass']
       },
       "static": {
         files: [
@@ -31,17 +35,12 @@ module.exports = function(){
         tasks: ['newer:copy:dist']
       },
       gruntfile: {
-        files: ['Gruntfile.js']
+        files: ['Gruntfile.js'],
+        tasks: ['newer:jshint']
       },
-      livereload: {
-        options: {
-          livereload: '<%= connect.options.livereload %>'
-        },
-        files: [
-          '.tmp/styles/{,*/}*.css',
-          '.tmp/scripts/{,*/}*.js',
-          '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-        ]
+      gruntfileCoffee: {
+        files: ['Gruntfile.coffee'],
+        tasks: ['newer:coffeelint']
       }
     }
   };
