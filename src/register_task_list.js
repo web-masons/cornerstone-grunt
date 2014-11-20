@@ -76,8 +76,6 @@ module.exports = function(grunt){
   grunt.registerTask('compile-coffee', [
     'newer:coffeelint:app',
     'newer:coffee:dist',
-    'copy:jsMap',
-    'copy:coffee',
     'newer:concat:js'
   ]);
 
