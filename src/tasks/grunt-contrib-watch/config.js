@@ -1,6 +1,10 @@
 module.exports = function(){
+
   return {
     watch: {
+      options: {
+        spawn: false
+      },
       coffee: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.{coffee,litcoffee,coffee.md}'],
         tasks: ['newer:coffeelint:app', 'newer:coffee:dist', 'copy:jsMap', 'copy:coffee', 'newer:concat:js']
@@ -31,7 +35,12 @@ module.exports = function(){
         tasks: ['newer:copy:dist']
       },
       gruntfile: {
-        files: ['Gruntfile.js']
+        files: ['Gruntfile.js'],
+        tasks: ['newer:jshint']
+      },
+      gruntfileCoffee: {
+        files: ['Gruntfile.coffee'],
+        tasks: ['newer:coffeelint']
       }
     }
   };
