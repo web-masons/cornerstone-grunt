@@ -1,6 +1,6 @@
 {
   "name": "cornerstone-grunt",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Contains common grunt configuration",
   "main": "index.js",
   "scripts": {
