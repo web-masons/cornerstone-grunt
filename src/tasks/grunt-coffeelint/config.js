@@ -9,7 +9,8 @@ module.exports = function(){
       app: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
       test: [
         'test/karma/**/*.coffee'
-      ]
+      ],
+      gruntfile: ['Gruntfile.coffee']
     }
   };
 };
