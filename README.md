@@ -152,6 +152,7 @@ To override the default configuration, you would need to add something similar t
 
 ## Release History
 
+ * 2014-11-24    1.1.1    Fix call to grunt.config in i18n task
  * 2014-11-20    1.1.0    Prune unused tasks, speed up watch on vagrant
  * 2014-09-11    1.0.0    First Release
 
